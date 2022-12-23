@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+{% with mesages = get_flashed_messages(with_categories = true) %}
+    {% if messages %} 
+        {% for cat, msg in messages %} 
+            {% if cat == 'auth-success' %} 
+                <div class="containter">
+                    {{ msg }}
+                    <button type ="button" class="close" data-dismiss = "alert", onclick="this.parentElement.style.display='none'">&times;</button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}  
+<header class="hero-section">
+    <h3 class="header-text">Welcome to stress free streaming!</h3>
+    <!-- <h5 class="header-text">Click here to find your favorites!
+        <a href="{{ url_for('site.collection') }}">
+    </h5> -->
+<!--Second update will see the carousell replaced by favorited movies, tv shows, and actors -->
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../static/images/shawshank_redemption.webp" class="d-block w-50" alt="Shawshank Redemption">
+      </div>
+      <div class="carousel-item">
+        <img src="../../static/images/the_dark_knight.webp" class="d-block w-50" alt="The Dark Knight">
+      </div>
+      <div class="carousel-item">
+        <img src="../../static/images/the_godfather_ii.jpeg" class="d-block w-50" alt="The God Father II">
+      </div>
+      <div class="carousel-item">
+        <img src="../../static/images/the_godfather.jpeg" class="d-block w-50" alt="The God Father">
+      </div>
+      <div class="carousel-item">
+        <img src="../../static/images/the_lord_of_the_rings_the_fellowship.jpeg" class="d-block w-50" alt="TLOR: The Fellowship">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</header>
+
+{% endblock content %}

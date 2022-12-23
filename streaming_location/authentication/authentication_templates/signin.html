@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Flask Flashed Message to User -->
+
+{% with mesages = get_flashed_messages(with_categories = true) %}
+    {% if messages %} 
+        {% for cat, msg in messages %} 
+            {% if cat == 'user-created' %} 
+                <div class="containter">
+                    {{ msg }}
+                    <button type ="button" class="close" data-dismiss = "alert", onclick="this.parentElement.style.display='none'">&times;</button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}    
+
+<h1>Sign In and Let the Streaming Begin</h1>
+    <table class="center">
+    <main class="container">
+        <div class="row">
+            <aside class="col-12 col-md-8">
+                <h2>Sign In to Your Account</h2>
+                {% include 'signin_form.html' %}
+            </aside>
+        </div>
+    </main>
+    </table>
+
+{% endblock content %}

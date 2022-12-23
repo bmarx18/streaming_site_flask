@@ -1,0 +1,20 @@
+<form method = "POST">
+    {{collection_form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="title-field">
+            {{ collection_form.label }}
+            {{ collection_form.title(class = "form-control", placeholder = "Movie Search") }}
+        </fieldset>
+       
+        {{ collection_form.submit_button(class = "btn btn-secondary btn-block") }}
+    </div>
+</form> 
+
+    <!-- <div class="form-group">
+        <fieldset id="movie-title-field">
+            {{ collection_form.label }}
+            {{ collection_form.title(class = "form-control", placeholder = "TV Search") }}
+        </fieldset> -->
+        <!-- Submit Button Here
+        {{ collection_form.submit_button(class = "btn btn-secondary btn-block") }} -->
+    <!-- </div> --> 

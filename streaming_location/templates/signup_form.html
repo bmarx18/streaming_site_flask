@@ -1,0 +1,25 @@
+<form method="POST">
+    {{ user_form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="first-name-field">
+            {{ user_form.first_name.label }}
+            {{ user_form.first_name(class = "form-control", placeholder = "First Name")}}
+        </fieldset>
+        <fieldset id="last-name-field">
+            {{ user_form.last_name.label }}
+            {{ user_form.last_name(class = "form-control", placeholder = "Last Name")}}
+        </fieldset>
+        <fieldset id="email-field">
+            {{ user_form.email.label }}
+            {{ user_form.email(class = "form-control", placeholder = "Email")}}
+        </fieldset>
+        <fieldset id="pass-field">
+            {{ user_form.password.label }}
+            {{ user_form.password(class = "form-control", placeholder = "Password")}}
+        </fieldset>
+        
+        <!-- Submit Button Area-->
+        {{ user_form.submit_button(class = 'btn btn-primary btn-black') }}
+
+    </div>
+</form>

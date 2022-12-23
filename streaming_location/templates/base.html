@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<title>Streaming Data API</title>
+</head>
+<body>
+    <!-- <nav class="ct-nav">
+        <div>
+            <img src="../static/images/marvel_logo.png" alt="Streaming Logo">
+        </div> -->
+
+        <!--Nav Images Start here-->
+    <nav>
+        <div>
+            <ul id="horizontal-list">
+                <!-- figure out how to move this to the left - it is currently being controlled by the parent 
+                    container
+                    <li id ='header-name'>StreamRUs
+                </li> -->
+                <li>Home
+                    <a href="{{ url_for('site.home') }}"></a>
+                </li>
+                
+                {% if current_user.is_authenticated %}
+                <li>Profile
+                    <a href="{{ url_for('site.profile') }}"></a>
+                </li>
+                <li>Streaming Directory
+                    <a href="{{ url_for('site.collection') }}"></a>
+                </li>
+                <li>Logout
+                    <a href="{{ url_for('auth.logout') }}"></a>
+                </li>
+        
+                {% else %}
+                <li>Sign In
+                    <a href="{{ url_for('auth.signin') }}"></a>
+                </li>
+                <li>Sign Up
+                    <a href="{{ url_for('auth.signup') }}"></a>
+                </li>
+    
+                {% endif %}
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- End of Nav Bar-->
+
+    {% block content %}
+
+    {% endblock content %}
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

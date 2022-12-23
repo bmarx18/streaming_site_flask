@@ -1,0 +1,184 @@
+body {
+    background-color: black;
+    color:white;
+}
+
+/* Nav Styles */
+.ct-nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+
+/* Target Main Logo Image */
+
+.ct-nav img{
+   width: 50%;
+   max-width: 100%;
+   margin-left: 2VW; 
+}
+ul#horizontal-list {
+    min-width: 696px;
+    list-style: none;
+    padding-top: 20px;
+    text-align: right;
+}
+
+ul#horizontal-list li, ul#horizontal-list a {
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw;
+    color: white;
+}
+
+ul#horizontal-list a:nth-last-child(1) {
+    border: 4px solid #791616;
+    border-radius: 11px;
+    margin-right: 0.2vw;
+    color: white;
+}
+
+/* End of Nav Styles */
+
+/* Start of Hero/Header Section */
+
+#header-text {
+    padding: 4vw;
+    color: white;
+    text-align: center;
+}
+
+.header-image {
+    width:100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* End of Hero/Heder Section */
+
+/* Start of Middle Section */
+
+#middle-text {
+    text-align: center;
+}
+
+#middle-text h2{
+    padding: 1.5vw;
+}
+
+/* End of Middle Section */
+
+/* Start of Features Section Styles */
+
+/* #captain_marvel-image, #black_widow-image {
+    margin-bottom: 10vh;
+    max-width: 60%;
+    max-height: 60%;
+    margin-left: 75px;
+}
+
+#wanda-image {
+    margin-top: 4vh;
+    margin-bottom: 8vh;
+    max-width: 60%;
+    max-height: 60%;
+    margin-left: 75px;
+}
+
+#features-section {
+    margin: 8vw;
+    font-weight: 150;
+}
+
+#carol_d, #natasha_r, #wanda_m{
+    position: center;
+    color: #8e16a9;
+    margin-left: 15px;
+}
+
+#wanda_m{
+    margin-top: 75px;
+    margin-left: 50px;
+    position: center;
+    color: #8e16a9;
+}
+
+#carol_d_quote, #natasha_r_quote{
+    margin-top: 20px;
+    position: center;
+    font-weight: 200;
+}
+
+#wanda_m_quote{
+    position: center;
+    font-weight: 200;
+    margin-left: 10px;
+} */
+
+/* End of Features Section */
+
+/* Start of Community Section Sytles */
+
+/* #Drone-image {
+    width: 50%;
+    max-width: 75%;
+    margin-left: 3vw;
+} */
+
+/* End of Community Section Sytles */
+
+/* Start of Footer Section Styles */
+
+.footer-text-flex {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vw;
+}
+
+#footer-logo {
+    width: 100%;
+    max-width: 100%;
+}
+
+#footer {
+    border-top: 3px solid black;
+}
+
+/* End of Footer Section Styles */
+
+/* Profile Styles */ 
+
+.hero-section {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba(30, 115, 172, 0.7), rgba (142, 57,153, 0.6), url(../images/hero_image.jpeg));
+    background-size: cover;
+    background-position: 35% 50%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80 vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80 vh, 0 100%);
+    position: relative;
+}
+
+.header-text {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    left: 20rem;
+    top: 10rem;
+    color: white;
+}
+
+/* sign in styles */
+
+.container {
+    margin: 0 auto;
+    width:90%; 
+    text-align: middle;
+}
+
+.row {
+    margin: 0 auto;
+    width:90%; 
+    text-align: middle;
+    padding-top: 50px;
+}
