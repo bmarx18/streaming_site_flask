@@ -28,7 +28,7 @@ def parent_movies(token):
 #tv (future update)
 # @api.route('/tvtitles', methods = ['POST'])
 # @token_required
-# def get_tv_title(token):
+# def tv_title(token):
 #     title = request.form.get('original_title')
 #     database_id = request.form.get('id')
 #     key_art = request.form.get('ket_art')
@@ -150,10 +150,10 @@ def movie_stream_results(movie_stream_list):
 #tv_future
 # def tv_search_results(tv_title_list):
 #     tv_title_results = []
-#     for tv_title_item in tv_title_list:
-#         id = tv_title_item.get('')
-#         title = tv_title_item.get('')
-#         key_art = tv_title_item.get('')
+#     for tv_title in tv_title_list:
+#         id = tv_title.get('')
+#         title = tv_title.get('')
+#         key_art = tv_title.get('')
 
 #         if key_art:
 #             tv_title_object = TvTitle(id, title, key_art)

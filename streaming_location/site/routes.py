@@ -13,8 +13,6 @@ def home():
 @site.route('/profile')
 @login_required
 def profile():
-    # favorite_movies = favorite_movies()
-    # titles = MovieTitle.query.filter_by(user_token = current_user.token).all()
     return render_template('profile.html')
 
 
